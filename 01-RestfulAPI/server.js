@@ -27,10 +27,7 @@ app.use('/memes', require('./routes/memes'));
 // CONNECT TO MONGODB
 
 // Connect to the MongoDB database using the connection string from .env
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
+mongoose.connect(process.env.MONGO_URI)
 .then(() => {
   // Log success message when connected
   console.log(' Connected to MongoDB');
